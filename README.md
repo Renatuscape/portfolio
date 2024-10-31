@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# Portfolio Page
+The purpose of this project is to organise my various tech projects on one easy-to-browse page. I have chosen to work with React + Vite/TypeScript to refresh my knowledge of these technologies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Status
+The project is currently in the planning phase.
 
-Currently, two official plugins are available:
+## Goals
+The user-facing part of the page should...
+* Be easy to **navigate**
+* Provide a quick **overview** of what I do
+* Be **visually** pleasing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The code should...
+* Be **clean** and **reusable**
+* Be well **documented**
+* Follow a **plan**
 
-## Expanding the ESLint configuration
+## Project Plan
+### Step 1: Preliminary Tasks 👈
+* Get a React/TypeScript project live on GitHub Pages ✅
+  * I determined that React + Vite is preferable to just React
+* Get a React + Vite/TypeScript project live on GitHub Pages ✅
+  * [The project is now live!](https://renatuscape.github.io/portfolio/)
+* Decide what basic content and funcitonality will be included ✅
+  * An 'About' page that will function similarly to a CV
+  * Highlights from my [GitHub repositories](https://github.com/Renatuscape?tab=repositories)
+  * Highlights from my [itch.io page](https://renatuscape.itch.io/)
+  * A page for the project plan and progress
+* Set a few long-term goals ✅
+  * A search function for my GitHub repositories
+  * Display some of my user data using GitHub API
+* Finish this project plan 🔄
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Step 2: Layout Tasks
+* Visuals
+  * Draft the basic page layout
+  * Create wireframe
+  * Test wireframe
+* Code
+  * Plan architecture
+  * Write pseudocode
 
-- Configure the top-level `parserOptions` property like this:
+## Legend
+👈 Indicates the step currently being worked on
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+🔄 Task in progress
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+✅ Task complete

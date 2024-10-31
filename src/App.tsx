@@ -15,7 +15,7 @@ function App() {
       </div>
       <div className="card">
         <p>
-          Created in Vite + React and Typescript.
+          Created in Vite + React and TypeScript.
         </p>
       </div>
       <p className="read-the-docs">
