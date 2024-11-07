@@ -1,26 +1,20 @@
-import reactLogo from './assets/react.svg'
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import { Home } from './pages/Home'
+import { Guestbook } from './pages/Guestbook'
+import { Header } from './components/header/Header'
+import { Footer } from './components/footer/Footer'
 
 function App() {
 
   return (
     <>
-      <a href="https://github.com/Renatuscape" target="_blank">
-        <h1>Renatuscape</h1>
-      </a>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <div className="card">
-        <p>
-          Created in Vite + React and TypeScript.
-        </p>
-      </div>
-      <p className="read-the-docs">
-        This page is under construction
-      </p>
+      <Header />
+      <Routes>
+        <Route path={"/portfolio/"} element={<Home />} />
+        <Route path={"/portfolio/guestbook"} element={<Guestbook />} />
+      </Routes>
+      <Footer/>
     </>
   )
 }
