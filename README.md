@@ -16,33 +16,42 @@ The code should...
 * Follow a **plan**
 
 ## Project Plan
-### Step 1: Preliminary Tasks 👈
-* Get a React/TypeScript project live on GitHub Pages ✅
+### Step 1: Preliminary Tasks
+* ✅ Get a React/TypeScript project live on GitHub Pages
   * I determined that React + Vite is preferable to just React
-* Get a React + Vite/TypeScript project live on GitHub Pages ✅
+* ✅ Get a React + Vite/TypeScript project live on GitHub Pages
   * [The project is now live!](https://renatuscape.github.io/portfolio/)
-* Decide what basic content and funcitonality will be included ✅
-  * An 'About' page that will function similarly to a CV
+* ✅ Decide what basic content and funcitonality will be included 
+  * An 'About' or 'Home' page that will function similarly to a CV
   * Highlights from my [GitHub repositories](https://github.com/Renatuscape?tab=repositories)
   * Highlights from my [itch.io page](https://renatuscape.itch.io/)
   * A page for the project plan and progress
-* Set a few long-term goals ✅
+* ✅ Set a few long-term goals
   * A search function for my GitHub repositories
   * Display some of my user data using GitHub API
-* Finish this project plan 🔄
+  * A guest book where visitors can leave comments that are stored in a live database
+    * MongoDB and backend has been sorted
+* ↪️ Finish this project plan
 
-### Step 2: Layout Tasks
+### Step 2: Layout Tasks 👈
 * Visuals
-  * Draft the basic page layout
-  * Create wireframe
+  * ✅ Draft the basic page layout
+  * 🔄 Create wireframe
   * Test wireframe
 * Code
-  * Plan architecture
+  * 🔄 Plan architecture
   * Write pseudocode
+
+### Step 3: Home Page Essentials
+* Implement basic functionality of the 'home' page
+  * Display some personal information and areas of interest in tech
+  * Display basic information about and link to a few select GitHub repositories
 
 ## Legend
 👈 Indicates the step currently being worked on
 
 🔄 Task in progress
+
+↪️ Return to task
 
 ✅ Task complete
