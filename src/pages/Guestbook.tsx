@@ -3,7 +3,7 @@ import { Page } from '../components/page/Page'
 
 export function Guestbook() {
     return (
-        <Page title='Guest Book'>
+        <Page>
             <Card>
                 <p>
                     Welcome to the guest book!

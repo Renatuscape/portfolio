@@ -4,7 +4,7 @@ import styles from './Pages.module.css';
 
 export function Home() {
     return (
-        <Page title='Home'>
+        <Page>
             <div className={styles.homeGrid}>
                 <Card>
                     <p>
