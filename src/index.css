@@ -29,7 +29,7 @@ body {
   display: flex;
   align-items: start;
   margin: auto;
-  background-image: url("repeating_texture_metal.jpg");
+  background-image: url("./assets/repeating_texture_metal.jpg");
   background-repeat: repeat;
 }
 
