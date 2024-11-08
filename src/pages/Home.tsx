@@ -1,13 +1,22 @@
-import '../App.css'
+import { Card } from '../components/card/Card'
+import { Page } from '../components/page/Page'
+import styles from './Pages.module.css';
 
 export function Home() {
     return (
-        <div className='home'>
-            <div className="card">
-                <p>
-                    Created in Vite + React and TypeScript.
-                </p>
+        <Page title='Home'>
+            <div className={styles.homeGrid}>
+                <Card>
+                    <p>
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+                    </p>
+                </Card>
+                <Card>
+                    <p>
+                        Created in Vite + React and TypeScript.
+                    </p>
+                </Card>
             </div>
-        </div>
+        </Page>
     )
 }
