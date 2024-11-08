@@ -9,12 +9,14 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path={"/portfolio/"} element={<Home />} />
-        <Route path={"/portfolio/guestbook"} element={<Guestbook />} />
-      </Routes>
-      <Footer/>
+      <div className='viewport-grid'>
+        <Header />
+        <Routes>
+          <Route path={"/portfolio/"} element={<Home />} />
+          <Route path={"/portfolio/guestbook"} element={<Guestbook />} />
+        </Routes>
+        <Footer />
+      </div>
     </>
   )
 }

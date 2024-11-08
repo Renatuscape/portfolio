@@ -1,15 +1,15 @@
-import '../App.css'
+import { Card } from '../components/card/Card'
+import { Page } from '../components/page/Page'
 
 export function Guestbook() {
     return (
-        <div className='guestbook'>
-            <h2>Guest Book</h2>
-            <div className="card">
+        <Page title='Guest Book'>
+            <Card>
                 <p>
                     Welcome to the guest book!
                 </p>
                 <p>In the future, this page will display comments from guests.</p>
-            </div>
-        </div>
+            </Card>
+        </Page>
     )
 }
