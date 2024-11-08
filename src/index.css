@@ -29,6 +29,8 @@ body {
   display: flex;
   align-items: start;
   margin: auto;
+  background-image: url("repeating_texture_metal.jpg");
+  background-repeat: repeat;
 }
 
 h1 {
