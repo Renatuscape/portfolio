@@ -1,12 +1,16 @@
 .card {
     border-radius: 7px;
     box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.253);
-    background-color: rgba(255, 255, 255, 0.418);
+    background-color: rgba(255, 255, 255, 0.425);
     padding: 10px;
+    margin: 0;
+    padding: 0;
     backdrop-filter: blur(4px);
 
     border-top: solid;
     border-right: solid;
     border-width: 1px;
     border-color: rgb(216, 203, 203);
+
+    overflow: hidden;
 }
