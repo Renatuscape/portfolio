@@ -10,12 +10,14 @@ export function Home() {
     return (
         <Page>
             <div className={styles.homeGrid}>
+                <div className={styles.infoColumn}>
                 <Card>
                     <UserInfo />
                     <p>
                         Created in Vite + React and TypeScript.
                     </p>
                 </Card>
+                </div>
                 <Card>
                     <RepoCollection />
                 </Card>
