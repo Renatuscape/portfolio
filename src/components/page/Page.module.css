@@ -7,7 +7,7 @@
 }
 
 .content{
-    max-width: 80vw;
+    max-width: 70vw;
     flex-grow: 1;
 }
 
@@ -15,5 +15,4 @@
     color: rgb(92, 124, 158);
     margin: 15px;
     font-size: xx-large;
-    text-shadow:  -1px 2px 4px rgba(0, 0, 0, 0.253);
 }
