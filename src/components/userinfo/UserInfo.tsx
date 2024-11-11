@@ -1,6 +1,7 @@
 import { Octokit } from "octokit";
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from "../../contexts/AuthContext";
+import styles from "./UserInfo.module.css";
 
 type UserData = {
     login: string;
@@ -42,8 +43,10 @@ export function UserInfo() {
     }, [])
 
     return <>
-        <p>
-            {loading ? <>Loading...</> : user != null ? <>Done loading!</> : "Unable to find user information"}
-        </p>
+            {loading ? <>Loading...</> : user != null ? <>
+                <div className={styles.userInfo}>
+                    <img src={user.avatar_url} />
+                </div>
+            </> : "Unable to find user information"}
     </>
 }
