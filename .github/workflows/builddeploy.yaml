@@ -21,6 +21,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          VITE_AUTHKEY: ${{ secrets.VITE_AUTHKEY }}
         run: npm run build
         # Add this if React Router is implemented in the future (keeps /about from 404ing)
         # env:
