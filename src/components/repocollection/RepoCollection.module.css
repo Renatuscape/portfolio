@@ -11,8 +11,7 @@
 
 .repoItem{
     text-align: left;
-    margin: 0;
-    margin-top: 15px;
+    margin: 10px;
     padding-bottom: 10px;
     background-color: rgba(255, 255, 255, 0.295);
     padding: 15px;
@@ -59,4 +58,8 @@
     background-color: rgba(70, 121, 145, 0.658);
     padding: 5px 10px 5px 10px ;
     border-radius: 5px;
+}
+
+.repoFooter a:hover{
+    background-color: rgba(80, 143, 172, 0.753);
 }
