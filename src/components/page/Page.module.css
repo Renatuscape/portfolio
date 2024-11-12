@@ -1,12 +1,11 @@
 .page {
-    padding: 20px;
-    padding-top: 40px;
+    padding: 40px 20px;
     background-color: rgba(124, 131, 150, 0.726);
     display: flex;
     justify-content: center;
 }
 
-.content{
+.content {
     max-width: 70vw;
     flex-grow: 1;
 }
