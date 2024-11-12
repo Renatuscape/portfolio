@@ -28,24 +28,31 @@ The code should...
   * A page for the project plan and progress
 * ✅ Set a few long-term goals
   * A search function for my GitHub repositories
-  * Display some of my user data using GitHub API
+  * Display some of my user statistics using GitHub API
   * A guest book where visitors can leave comments that are stored in a live database
     * MongoDB and backend has been sorted
 * ↪️ Finish this project plan
 
-### Step 2: Layout Tasks 👈
+### Step 2: Layout Tasks
 * Visuals
   * ✅ Draft the basic page layout
-  * 🔄 Create wireframe
-  * Test wireframe
+  * ✅ Create wireframe
+  * ✅ Test wireframe
 * Code
-  * 🔄 Plan architecture
-  * Write pseudocode
+  * ✅ Plan architecture
+  * ✅ Write pseudocode
 
-### Step 3: Home Page Essentials
+### Step 3: Home Page Essentials 👈
 * Implement basic functionality of the 'home' page
-  * Display some personal information and areas of interest in tech
-  * Display basic information about and link to a few select GitHub repositories
+  * 🔄 Display some personal information and areas of interest in tech
+  * 🔄 Display basic information about and link to a few select GitHub repositories
+  * Create static placeholder data to replace error message when GitHub API fails to load
+
+### Step 4: Guest Book Essentials
+* Implement basic funcitonality of the 'guest book' page
+  * It should be possible to post messages to the database
+  * It should be possible to load messages from the database
+  * Display placeholder data when the backend API is offline
 
 ## Legend
 👈 Indicates the step currently being worked on
