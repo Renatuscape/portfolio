@@ -15,7 +15,7 @@
     padding: 0;
 }
 
-.userInfo .imageContainer{
+.userInfo .imageContainer {
     display: flex;
     border-bottom: solid;
     border-width: 1px;
@@ -24,6 +24,13 @@
     padding: 0;
 }
 
-.userInfo .infoContainer{
+.userInfo .infoContainer {
     text-align: left;
+    padding: 15px;
+}
+
+.userInfo .infoContainer h1 {
+    text-align: left;
+    padding: 0;
+    margin: 0;
 }
