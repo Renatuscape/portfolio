@@ -13,9 +13,6 @@ export function Home() {
                 <div className={styles.infoColumn}>
                 <Card>
                     <UserInfo />
-                    <p>
-                        Created in Vite + React and TypeScript.
-                    </p>
                 </Card>
                 </div>
                 <Card>
