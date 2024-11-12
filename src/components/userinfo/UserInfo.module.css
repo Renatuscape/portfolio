@@ -1,7 +1,29 @@
 .userInfo {
+    box-sizing: border-box;
     max-width: max-content;
+    max-height: max-content;
+    margin: 0;
+    padding: 0;
 }
 
-.userInfo img {
+.userInfo .imageContainer img {
     max-width: 100%;
+    border-left: solid;
+    border-width: 1px;
+    border-color: rgb(197, 172, 172);
+    margin: 0;
+    padding: 0;
+}
+
+.userInfo .imageContainer{
+    display: flex;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(216, 203, 203);
+    margin: 0;
+    padding: 0;
+}
+
+.userInfo .infoContainer{
+    text-align: left;
 }
