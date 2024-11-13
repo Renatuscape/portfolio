@@ -1,12 +1,9 @@
 .repoCollection{
-    display: grid;
-    flex-direction: column;
     justify-content: center;
     padding: 15px;
     padding-top: 0;
     margin: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    column-gap: 30px;
+
 }
 
 .repoItem{
