@@ -1,18 +1,11 @@
+import styles from "./RepoCollection.module.css";
 import { Octokit } from "octokit";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
-import styles from "./RepoCollection.module.css";
 import { LoadingIcon } from "../loadingIcon/LoadingIcon";
 import { ErrorDisplay } from "../errorDisplay/ErrorDisplay";
-
-type RepoData = {
-    id: number;
-    name: string;
-    description: string | null;
-    html_url: string;
-    language: string;
-    languages_url: string;
-}
+import { RepoData } from "../../types/Types";
+import { RepoItem } from "./RepoItem";
 
 export function RepoCollection() {
     const auth = useContext(AuthContext);
@@ -64,20 +57,8 @@ export function RepoCollection() {
     }, [auth.key])
 
     const repoList = repos.map((repo) =>
-        <div key={repo.id} className={styles.repoItem}>
-            <h1>{NameFormatter(repo.name)}</h1>
-            <p>{repo.description ? repo.description : "No description"}</p>
-            <div className={styles.repoFooter}><span id={styles.langTag}>{repo.language}</span><a href={repo.html_url}>Visit ◥</a></div>
-        </div>
+        <RepoItem repo={repo} key={repo.id} />
     );
-
-    // Turns all dashes into spaces and converts camelcase to spaces
-    function NameFormatter(name: string) {
-        return name
-            .replace(/([a-z0-9])([A-Z])/g, '$1 $2')  // Adds space between lowercase and uppercase
-            .replace(/-/g, ' ')                       // Replaces hyphens with spaces
-            .replace(/\b\w/g, char => char.toUpperCase()); // Capitalizes first letter of each word
-    }
 
     return <>
         {error ? <ErrorDisplay message={error} /> : <>
