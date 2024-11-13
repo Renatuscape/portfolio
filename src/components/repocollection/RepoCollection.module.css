@@ -1,4 +1,4 @@
-.repoCollection{
+.repoCollection {
     justify-content: center;
     padding: 15px;
     padding-top: 0;
@@ -6,7 +6,7 @@
 
 }
 
-.repoItem{
+.repoItem {
     text-align: left;
     margin: 10px;
     padding-bottom: 10px;
@@ -20,18 +20,18 @@
     border-color: rgb(240, 233, 233);
     box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.253);
 
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-.repoItem h1{
+.repoItem h1 {
     margin: 0;
     padding: 0;
     color: rgb(67, 95, 114);
     font-size: x-large;
 }
 
-.repoItem p{
+.repoItem p {
     padding: 0;
     margin: 0;
     margin-bottom: 5px;
@@ -39,25 +39,40 @@
     flex-grow: 1;
 }
 
-.repoFooter{
+.repoFooter {
     padding-top: 10px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
-#langTag{
+#langTag {
     background-color: rgba(67, 95, 114, 0.658);
     color: rgb(71, 199, 199);
-    padding: 5px 10px 5px 10px ;
+    padding: 5px 10px 5px 10px;
     border-radius: 5px;
 }
 
-.repoFooter a{
+.repoFooter a {
     background-color: rgba(70, 121, 145, 0.658);
-    padding: 5px 10px 5px 10px ;
+    padding: 5px 10px 5px 10px;
     border-radius: 5px;
+    margin-left: 15px;
 }
 
-.repoFooter a:hover{
+.repoFooter .live{
+    color: rgb(255, 209, 125);
+}
+
+.repoFooter .live:hover{
+    color: rgb(255, 245, 201);
+    background-color: rgba(172, 155, 80, 0.753);
+}
+
+.repoFooter a:hover {
     background-color: rgba(80, 143, 172, 0.753);
+}
+
+.repoFooter .linkContainer {
+    display: flex;
+    justify-content: space-between;
 }
