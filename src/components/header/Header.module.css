@@ -48,30 +48,23 @@ nav {
   padding: 0;
   list-style-type: none;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   justify-content: end;
 }
 
 .navitem {
-  padding-left: 13px;
-  padding-right: 13px;
+  padding: 5px 15px;
+  margin-bottom: -5px;
   align-self: center;
   transition: 200ms background-color;
   border-radius: 3px;
   user-select: none;
   cursor: pointer;
   font-size: x-large;
-  border-top: solid;
-  border-right: solid;
-  border-width: 1px;
-  border-color: rgba(114, 149, 187, 0);
 }
 
 .navitem:hover {
-  background-color: rgb(92, 124, 158);
-  border-top: solid;
-  border-right: solid;
-  border-width: 1px;
+  background-color: rgb(92, 130, 167);
   border-color: rgba(114, 149, 187, 0.445);
 }
 
@@ -88,5 +81,21 @@ nav {
 @media (prefers-reduced-motion: no-preference) {
   .react-logo {
     animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navitem{
+    padding: 0 5px;
+    margin: 0;
+    font-size: large;
+  }
+
+  h1{
+    font-size: xx-large;
+  }
+
+  nav{
+    gap: 10px;
   }
 }
