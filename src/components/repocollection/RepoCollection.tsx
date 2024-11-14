@@ -12,6 +12,19 @@ export function RepoCollection() {
     const [repos, setRepos] = useState<RepoData[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [expanded, setExpanded] = useState<number>(-1);
+
+    // This method should be triggered when clicking on a repository
+    function expandRepo(id: number) {
+
+        if (id === expanded) {
+            setExpanded(-1);
+        }
+        else {
+            setExpanded(id);
+        }
+        console.log('ID FOR EXPANDED REPO HAS BEEN SET TO ' + id);
+    }
 
     // Timeout function to reject after a given time
     const timeoutPromise = (timeout: number) => new Promise<any>((_, reject) =>
@@ -57,7 +70,7 @@ export function RepoCollection() {
     }, [auth.key])
 
     const repoList = repos.map((repo) =>
-        <RepoItem repo={repo} key={repo.id} />
+        <RepoItem repo={repo} expandedId={expanded} expand={() => expandRepo(repo.id)} key={repo.id} />
     );
 
     return <>

@@ -40,6 +40,7 @@
 }
 
 .repoFooter {
+    max-height: 45px;
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -56,14 +57,15 @@
     background-color: rgba(70, 121, 145, 0.658);
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
-    margin-left: 15px;
+    margin-left: 10px;
+    overflow: hidden;
 }
 
-.repoFooter .live{
+.repoFooter .live {
     color: rgb(255, 209, 125);
 }
 
-.repoFooter .live:hover{
+.repoFooter .live:hover {
     color: rgb(255, 245, 201);
     background-color: rgba(172, 155, 80, 0.753);
 }
@@ -75,4 +77,51 @@
 .repoFooter .linkContainer {
     display: flex;
     justify-content: space-between;
+}
+
+.languageContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.languageContainer button {
+    width: 35px;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: rgb(71, 199, 199);
+    background-color: rgba(67, 95, 114, 0.658);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expandedInfoContainer {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.116);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.expandedLangItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    margin: 3px;
+}
+
+.expandedItemLine{
+    border-bottom: dotted;
+    border-color: rgba(114, 107, 75, 0.562);
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.expandedLangItem #langTag{
+    background-color: rgba(114, 107, 75, 0.753);
+    color: rgb(255, 209, 125);
 }

@@ -11,7 +11,7 @@ export function Home() {
         <Page>
             <div className={styles.homeGrid}>
                 <div className={styles.infoColumn}>
-                <Card>
+                <Card  customStyle={{borderTopLeftRadius: '25%'}}>
                     <UserInfo />
                 </Card>
                 </div>

@@ -9,6 +9,7 @@ type UserData = {
     login: string;
     name: string;
     avatar_url: string;
+    bio: string;
 }
 
 export function UserInfo() {
@@ -62,6 +63,7 @@ export function UserInfo() {
                     </div>
                     <div className={styles.infoContainer}>
                         <h1>{user.name}</h1>
+                        {user.bio && <p>{user.bio}</p>}
                     </div>
                 </div>
             </> : "Unable to find user information"}

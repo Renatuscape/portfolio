@@ -6,22 +6,23 @@
     padding: 0;
 }
 
-.userInfo .imageContainer img {
-    max-width: 100%;
-    border-left: solid;
-    border-width: 1px;
-    border-color: rgb(197, 172, 172);
+.userInfo .imageContainer {
+    display: flex;
     margin: 0;
     padding: 0;
 }
 
-.userInfo .imageContainer {
-    display: flex;
-    border-bottom: solid;
+.userInfo .imageContainer img {
+    border-radius: 100%;
+    max-width: 65%;
+    box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.253);
+    border-top: solid;
+    border-right: solid;
     border-width: 1px;
     border-color: rgb(216, 203, 203);
-    margin: 0;
+    margin: -25px 0 15px -25px;
     padding: 0;
+    flex-grow: 1;
 }
 
 .userInfo .infoContainer {

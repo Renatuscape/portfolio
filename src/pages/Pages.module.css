@@ -12,13 +12,13 @@
 }
 
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 900px) {
     .homeGrid {
         grid-template-columns: 1fr 3fr;
     }
 
     .infoColumn{
         position: sticky;
-        top: 125px;
+        top: 175px;
     }
 }
