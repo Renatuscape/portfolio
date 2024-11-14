@@ -24,10 +24,33 @@ export function RepoItem({ repo, expandedId, expand }: RepoProps) {
 
     // Turns all dashes into spaces and converts camelcase to spaces
     function NameFormatter(name: string) {
-        return name
+        name = name
             .replace(/([a-z0-9])([A-Z])/g, '$1 $2')  // Adds space between lowercase and uppercase
             .replace(/-/g, ' ')                       // Replaces hyphens with spaces
             .replace(/\b\w/g, char => char.toUpperCase()); // Capitalizes first letter of each word
+
+        if (name.includes('Api ')) {
+            name = name.replace('Api ', 'API ');
+        }
+        else if (name.includes(' Api')) {
+            name = name.replace(' Api', ' API');
+        }
+
+        if (name.includes('Js ')) {
+            name = name.replace('Js ', 'JS ');
+        }
+        else if (name.includes(' Js')) {
+            name = name.replace(' Js', ' JS');
+        }
+
+        if (name.includes('Ts ')) {
+            name = name.replace('Ts ', 'TS ');
+        }
+        else if (name.includes(' Ts')) {
+            name = name.replace(' Ts', ' TS');
+        }
+
+        return name;
     }
 
     // Fetching language data when requested reduces unnecessary API calls
@@ -85,7 +108,7 @@ export function RepoItem({ repo, expandedId, expand }: RepoProps) {
             <p>{repo.description ? repo.description : "No description"}</p>
             <div className={styles.repoFooter}>
                 <div className={styles.languageContainer}>
-                    <button title={repo.id !== expandedId ? 'Show all languages': 'Show only top language'} onClick={onClickHandler}>{repo.id === expandedId ? <>▲</> : <>▼</>}</button>
+                    <button title={repo.id !== expandedId ? 'Show all languages' : 'Show only top language'} onClick={onClickHandler}>{repo.id === expandedId ? <>▲</> : <>▼</>}</button>
                     {repo.id !== expandedId && <span id={styles.langTag}>{repo.language}</span>}
                 </div>
                 <div className={styles.linkContainer}>
@@ -95,14 +118,14 @@ export function RepoItem({ repo, expandedId, expand }: RepoProps) {
             </div>
             {repo.id === expandedId && <div className={styles.expandedInfoContainer}>
                 {repoLangs ? <>
-                            {Object.entries(repoLangs).map(([language, bytes], index) => (
-                                <div key={language} className={styles.expandedLangItem}>
-                                    <span title={`Top ${index + 1} language in the project`} id={styles.langTag}>{language}</span> <span className={styles.expandedItemLine}> </span><span title='Total bytes of this language in the project'>{bytes} bytes</span>
-                                </div>
-                            ))}
-                        </> :
-                        <p>Fetching language data...</p>
-                    }
+                    {Object.entries(repoLangs).map(([language, bytes], index) => (
+                        <div key={language} className={styles.expandedLangItem}>
+                            <span title={`Top ${index + 1} language in the project`} id={styles.langTag}>{language}</span> <span className={styles.expandedItemLine}> </span><span title='Total bytes of this language in the project'>{bytes} bytes</span>
+                        </div>
+                    ))}
+                </> :
+                    <p>Fetching language data...</p>
+                }
             </div>}
         </div>
     </>
