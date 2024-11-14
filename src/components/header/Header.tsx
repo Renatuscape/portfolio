@@ -10,7 +10,7 @@ export function Header() {
                 </a>
                 <nav>
                     <div className={styles.navitem}>
-                        <Link to={"/portfolio/"}>Home</Link>
+                        <Link to={"/portfolio/"}>About</Link>
                     </div>
                     <div className={styles.navitem}>
                         <Link to={"/portfolio/guestbook"}>Guest Book</Link>
