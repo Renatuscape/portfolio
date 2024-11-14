@@ -1,0 +1,33 @@
+.userActivity {
+    box-sizing: border-box;
+    max-width: max-content;
+    max-height: max-content;
+    margin: 0;
+    padding: 15px;
+}
+
+.userActivity h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.userActivity p {
+    margin-top: 5px;
+}
+
+.userActivity a {
+    color: rgb(255, 209, 125);
+}
+
+.userActivity a:hover {
+    color: rgb(255, 245, 201);
+}
+
+.userActivity ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.userActivity li {
+    padding-top: 10px;
+}
