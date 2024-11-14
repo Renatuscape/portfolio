@@ -69,8 +69,12 @@ export function RepoCollection() {
         fetchRepoData();
     }, [auth.key])
 
-    const repoList = repos.map((repo) =>
-        <RepoItem repo={repo} expandedId={expanded} expand={() => expandRepo(repo.id)} key={repo.id} />
+    const repoList = repos.map((repo) => {
+        // Skip printing any repositories with the specified tag. Set this tag in GitHub repo settings
+        if (!repo.topics.includes('excludefromportfolio')) {
+            return <RepoItem repo={repo} expandedId={expanded} expand={() => expandRepo(repo.id)} key={repo.id} />
+        }
+    }
     );
 
     return <>
