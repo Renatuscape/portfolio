@@ -79,19 +79,19 @@ export function RepoItem({ repo, expandedId, expand }: RepoProps) {
             <p>{repo.description ? repo.description : "No description"}</p>
             <div className={styles.repoFooter}>
                 <div className={styles.languageContainer}>
-                    <button onClick={onClickHandler}>{repo.id === expandedId ? <>▲</> : <>▼</>}</button>
+                    <button title={repo.id !== expandedId ? 'Show all languages': 'Show only top language'} onClick={onClickHandler}>{repo.id === expandedId ? <>▲</> : <>▼</>}</button>
                     {repo.id !== expandedId && <span id={styles.langTag}>{repo.language}</span>}
                 </div>
                 <div className={styles.linkContainer}>
-                    {repo.homepage && <a title='Go to live page' className={styles.live} href={repo.homepage} target="_blank">Live View ◥</a>}
+                    {repo.homepage && <a title='Go to live page' className={styles.live} href={repo.homepage} target="_blank">Live ◥</a>}
                     <a title='Show GitHub repo' href={repo.html_url} target="_blank">Visit ◥</a>
                 </div>
             </div>
             {repo.id === expandedId && <div className={styles.expandedInfoContainer}>
                 {repoLangs ? <>
-                            {Object.entries(repoLangs).map(([language, bytes]) => (
+                            {Object.entries(repoLangs).map(([language, bytes], index) => (
                                 <div key={language} className={styles.expandedLangItem}>
-                                    <span id={styles.langTag}>{language}</span> <span className={styles.expandedItemLine}> </span><span>{bytes}B</span>
+                                    <span title={`Top ${index + 1} language in the project`} id={styles.langTag}>{language}</span> <span className={styles.expandedItemLine}> </span><span title='Total bytes of this language in the project'>{bytes} bytes</span>
                                 </div>
                             ))}
                         </> :
