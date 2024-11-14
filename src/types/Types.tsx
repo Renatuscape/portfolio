@@ -6,4 +6,5 @@ export type RepoData = {
     language: string;
     languages_url: string;
     homepage: string;
+    topics: string [];
 }
