@@ -1,15 +1,19 @@
+// Represents one repo and can fetch additional language information on request
+
 import styles from "./RepoCollection.module.css";
 import { RepoData } from "../../types/Types";
 import { useContext, useEffect, useState } from "react";
 import { Octokit } from "octokit";
 import { AuthContext } from "../../contexts/AuthContext";
 
+// Expansion is stored and handled on the parent component, so only one repo is expanded at a time
 type RepoProps = {
     repo: RepoData;
     expandedId: number;
     expand: (id: number) => void;
 }
 
+// Languages are returned with their name as key, and the number of bytes it takes up in the repo
 type LangData = {
     [name: string]: number;
 }
@@ -26,6 +30,7 @@ export function RepoItem({ repo, expandedId, expand }: RepoProps) {
             .replace(/\b\w/g, char => char.toUpperCase()); // Capitalizes first letter of each word
     }
 
+    // Fetching language data when requested reduces unnecessary API calls
     async function onClickHandler() {
         expand(repo.id);
         console.log('OnClickHandler is running')
@@ -62,6 +67,7 @@ export function RepoItem({ repo, expandedId, expand }: RepoProps) {
         }
     }
 
+    // For logging purposes only. UseEffect is necessary to get the data printed, because the fetch request is not happening in a useEffect hook
     useEffect(() => {
         if (repoLangs !== null) {
             console.log('Updated repoLangs:', repoLangs);
