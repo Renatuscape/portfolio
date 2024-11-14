@@ -6,6 +6,10 @@
 }
 
 .infoColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
     min-width: 260px;
     max-width: max-content;
     height: min-content;
