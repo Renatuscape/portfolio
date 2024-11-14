@@ -46,6 +46,7 @@ header img {
 nav {
   margin: 0;
   padding: 0;
+  padding-right: 15px;
   list-style-type: none;
   display: flex;
   gap: 20px;
