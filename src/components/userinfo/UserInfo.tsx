@@ -10,6 +10,7 @@ type UserData = {
     name: string;
     avatar_url: string;
     bio: string;
+    location: string;
 }
 
 export function UserInfo() {
@@ -63,6 +64,7 @@ export function UserInfo() {
                     </div>
                     <div className={styles.infoContainer}>
                         <h1>{user.name}</h1>
+                        <div className={styles.locationSubtitle}>{user.location}</div>
                         {user.bio && <p>{user.bio}</p>}
                     </div>
                 </div>
