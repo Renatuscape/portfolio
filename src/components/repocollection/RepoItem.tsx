@@ -5,6 +5,7 @@ import { RepoData } from "../../types/Types";
 import { useContext, useEffect, useState } from "react";
 import { Octokit } from "octokit";
 import { AuthContext } from "../../contexts/AuthContext";
+import { NameFormatter } from "./RepoTools";
 
 // Expansion is stored and handled on the parent component, so only one repo is expanded at a time
 type RepoProps = {
@@ -21,37 +22,6 @@ type LangData = {
 export function RepoItem({ repo, expandedId, expand }: RepoProps) {
     const [repoLangs, setRepoLangs] = useState<LangData | null>(null);
     const auth = useContext(AuthContext);
-
-    // Turns all dashes into spaces and converts camelcase to spaces
-    function NameFormatter(name: string) {
-        name = name
-            .replace(/([a-z0-9])([A-Z])/g, '$1 $2')  // Adds space between lowercase and uppercase
-            .replace(/-/g, ' ')                       // Replaces hyphens with spaces
-            .replace(/\b\w/g, char => char.toUpperCase()); // Capitalizes first letter of each word
-
-        if (name.includes('Api ')) {
-            name = name.replace('Api ', 'API ');
-        }
-        else if (name.includes(' Api')) {
-            name = name.replace(' Api', ' API');
-        }
-
-        if (name.includes('Js ')) {
-            name = name.replace('Js ', 'JS ');
-        }
-        else if (name.includes(' Js')) {
-            name = name.replace(' Js', ' JS');
-        }
-
-        if (name.includes('Ts ')) {
-            name = name.replace('Ts ', 'TS ');
-        }
-        else if (name.includes(' Ts')) {
-            name = name.replace(' Ts', ' TS');
-        }
-
-        return name;
-    }
 
     // Fetching language data when requested reduces unnecessary API calls
     async function onClickHandler() {
