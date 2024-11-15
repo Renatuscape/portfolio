@@ -6,7 +6,7 @@ import { LoadingIcon } from "../loadingIcon/LoadingIcon";
 import { ErrorDisplay } from "../errorDisplay/ErrorDisplay";
 import { RepoData } from "../../types/Types";
 import { RepoItem } from "./RepoItem";
-import { IsWhiteListed } from "./RepoWhitelist";
+import { IsWhiteListed } from "./RepoTools";
 
 export function RepoCollection() {
     const auth = useContext(AuthContext);
