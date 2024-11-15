@@ -6,6 +6,7 @@ import { LoadingIcon } from "../loadingIcon/LoadingIcon";
 import { ErrorDisplay } from "../errorDisplay/ErrorDisplay";
 import { RepoData } from "../../types/Types";
 import { RepoItem } from "./RepoItem";
+import { IsWhiteListed } from "./RepoWhitelist";
 
 export function RepoCollection() {
     const auth = useContext(AuthContext);
@@ -70,12 +71,11 @@ export function RepoCollection() {
     }, [auth.key])
 
     const repoList = repos.map((repo) => {
-        // Skip printing any repositories with the specified tag. Set this tag in GitHub repo settings
-        if (!repo.topics.includes('excludefromportfolio')) {
+        // Skip repositories that have not been added to the whitelist
+        if (IsWhiteListed(repo)) {
             return <RepoItem repo={repo} expandedId={expanded} expand={() => expandRepo(repo.id)} key={repo.id} />
         }
-    }
-    );
+    });
 
     return <>
         {error ? <ErrorDisplay message={error} /> : <>
