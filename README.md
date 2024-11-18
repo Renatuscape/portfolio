@@ -27,7 +27,6 @@ The code should...
   * Highlights from my [itch.io page](https://renatuscape.itch.io/)
   * A page for the project plan and progress
 * ✅ Set a few long-term goals
-  * A search function for my GitHub repositories
   * Display some of my user statistics using GitHub API
   * A guest book where visitors can leave comments that are stored in a live database
     * MongoDB and backend has been sorted
@@ -44,9 +43,9 @@ The code should...
 
 ### Step 3: Home Page Essentials 👈
 * Implement basic functionality of the 'home' page
-  * 🔄 Display some personal information and areas of interest in tech
-  * 🔄 Display basic information about and link to a few select GitHub repositories
-  * Create static placeholder data to replace error message when GitHub API fails to load
+  * ✅ Display some personal information and areas of interest in tech
+  * ✅ Display basic information about and link to a few select GitHub repositories
+  * 🔄 Create static placeholder data to replace error message when GitHub API fails to load
 
 ### Step 4: Guest Book Essentials
 * Implement basic funcitonality of the 'guest book' page
