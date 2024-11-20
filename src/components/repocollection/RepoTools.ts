@@ -13,6 +13,7 @@ export function IsWhiteListed(repo: RepoData) {
         'AcademicWork-EFSamurai',
         'Salary-Total',
         'AcademicWork-EFSamurai',
+        'odin-etch-a-sketch'
     ]
 
     return whiteList.includes(repo.name);
